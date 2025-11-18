@@ -1,0 +1,52 @@
+# config.yaml - esperimenti consigliati per Taxi-v3
+common:
+  env_name: "Taxi-v3"
+  seeds: [0, 11, 22, 33, 44]
+  device: "cpu"  # "cuda" per GPU se disponibile
+  num_workers: 1
+
+q_learning:
+  episodes: 5000
+  max_steps: 200
+  alpha: 0.1
+  gamma: 0.99
+  epsilon_start: 1.0
+  epsilon_end: 0.05
+  epsilon_decay_frac: 0.8
+  save_dir: "results/q_learning"
+
+dqn:
+  episodes: 2000
+  max_steps: 200
+  lr: 1e-3
+  gamma: 0.99
+  buffer_size: 20000
+  batch_size: 64
+  embedding_dim: 64
+  hidden_dim: 128
+  epsilon_start: 1.0
+  epsilon_end: 0.05
+  epsilon_decay_steps: 30000
+  save_dir: "results/dqn"
+  tensorboard: true
+  tb_logdir: "tb_logs/dqn"
+
+double_dqn:
+  episodes: 3000
+  max_steps: 200
+  lr: 1e-3
+  gamma: 0.99
+  buffer_size: 50000
+  batch_size: 64
+  target_update_every: 1000
+  epsilon_start: 1.0
+  epsilon_end: 0.05
+  epsilon_decay_steps: 40000
+  save_dir: "results/double_dqn"
+  tensorboard: true
+  tb_logdir: "tb_logs/double_dqn"
+
+run:
+  repeat_per_seed: false   # se true: ripete gli esperimenti per ogni seed (utile per debug)
+  runs_per_method: 5
+  aggregate_save: "results/summary.csv"

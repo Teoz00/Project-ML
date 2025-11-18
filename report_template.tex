@@ -1,0 +1,59 @@
+% report_template.tex - template minimal for the project
+\documentclass[a4paper,11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{caption}
+\usepackage{float}
+\title{Reinforcement Learning on Taxi-v3: Q-learning, DQN, Double DQN}
+\author{Nome Cognome - Matricola}
+\date{\today}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+Breve sommario degli obiettivi, metodi e risultati principali.
+\end{abstract}
+
+\section{Introduzione}
+Motivazioni e obiettivi.
+
+\section{Background}
+Brevi richiami su MDP, Q-learning, Bellman, DQN, Double DQN.
+
+\section{Ambiente}
+Descrizione di Taxi-v3: stati, azioni, reward.
+
+\section{Metodi}
+Spiegazione matematica e pseudocodice di:
+\begin{itemize}
+  \item Q-learning tabellare
+  \item DQN (single network)
+  \item Double DQN
+\end{itemize}
+
+\section{Setup sperimentale}
+Hardware, versioni librerie (includere requirements.txt), iperparametri (tabella).
+
+\section{Risultati}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{results/comparison.png}
+\caption{Confronto media $\pm$ std tra metodi (più seed).}
+\end{figure}
+
+Aggiungere tabelle con metriche: avg reward, std, episodi di convergenza, tempo.
+
+\section{Discussione}
+Analisi critica, cause di comportamenti osservati, limiti.
+
+\section{Conclusioni e lavori futuri}
+Riepilogo e suggerimenti (Prioritized Replay, Dueling, etc.)
+
+\appendix
+\section{Appendice - Hyperparameters}
+Inserire file params.json o screenshot.
+
+\end{document}

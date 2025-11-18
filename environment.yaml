@@ -1,0 +1,15 @@
+name: taxi_rl
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.9
+  - pip
+  - pip:
+      - gymnasium
+      - numpy
+      - torch
+      - matplotlib
+      - pyyaml
+      - tensorboard
+      - pytest

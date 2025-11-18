@@ -1,10 +1,12 @@
-# q_learning.py
+# src/q_learning.py
 import numpy as np
 import time
-from utils import ensure_dir
+from utils import ensure_dir, save_json
+import os
 
 class TabularQLearning:
-    def __init__(self, n_states, n_actions, alpha=0.1, gamma=0.99, epsilon_start=1.0, epsilon_end=0.05, epsilon_decay_steps=10000):
+    def __init__(self, n_states, n_actions, alpha=0.1, gamma=0.99,
+                 epsilon_start=1.0, epsilon_end=0.05, epsilon_decay_steps=10000):
         self.n_states = n_states
         self.n_actions = n_actions
         self.Q = np.zeros((n_states, n_actions), dtype=np.float32)
@@ -54,7 +56,8 @@ class TabularQLearning:
         print(f"[Q] Training finished in {duration:.1f}s")
         if save_dir:
             ensure_dir(save_dir)
-            np.save(save_dir + "/q_table.npy", self.Q)
+            np.save(os.path.join(save_dir, "q_table.npy"), self.Q)
+            np.save(os.path.join(save_dir, "rewards.npy"), np.array(rewards))
         return rewards
 
     def evaluate(self, env, episodes=100, render=False):

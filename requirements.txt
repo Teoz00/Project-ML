@@ -1,0 +1,7 @@
+gymnasium
+numpy
+torch
+matplotlib
+pyyaml
+tensorboard
+pytest
