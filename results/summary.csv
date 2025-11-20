@@ -1,0 +1,16 @@
+method,seed,avg_reward_final,std_reward_final,episodes,duration_s,result_dir
+q_learning,0,5.09,5.451779525989656,5000,4.8,results/q_learning\seed_0
+q_learning,11,4.93,5.872401553027518,5000,4.7,results/q_learning\seed_11
+q_learning,22,4.8,7.111961754677819,5000,4.7,results/q_learning\seed_22
+q_learning,33,5.34,6.26613118279533,5000,4.8,results/q_learning\seed_33
+q_learning,44,5.35,6.62476414674515,5000,4.7,results/q_learning\seed_44
+dqn,0,-238.88,53.33409416123986,2000,3017.7,results/dqn\seed_0
+dqn,11,-370.73,284.5009615097988,2000,2928.5,results/dqn\seed_11
+dqn,22,-269.66,96.3934873318732,2000,2756.0,results/dqn\seed_22
+dqn,33,-229.25,15.293380921169785,2000,2976.7,results/dqn\seed_33
+dqn,44,3.41,10.952711992926682,2000,281.7,results/dqn\seed_44
+double_dqn,0,3.92,8.627490944648972,3000,420.0,results/double_dqn\seed_0
+double_dqn,11,4.55,13.505832073589543,3000,573.1,results/double_dqn\seed_11
+double_dqn,22,6.05,4.946463383064713,3000,438.5,results/double_dqn\seed_22
+double_dqn,33,4.95,5.46511665017317,3000,664.8,results/double_dqn\seed_33
+double_dqn,44,5.15,5.269487641127931,3000,415.6,results/double_dqn\seed_44

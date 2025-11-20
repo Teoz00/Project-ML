@@ -1,0 +1,18 @@
+{
+  "config": {
+    "episodes": 3000,
+    "max_steps": 200,
+    "lr": "1e-3",
+    "gamma": 0.99,
+    "buffer_size": 50000,
+    "batch_size": 64,
+    "target_update_every": 1000,
+    "epsilon_start": 1.0,
+    "epsilon_end": 0.05,
+    "epsilon_decay_steps": 40000,
+    "save_dir": "results/double_dqn",
+    "tensorboard": true,
+    "tb_logdir": "tb_logs/double_dqn"
+  },
+  "seed": 44
+}

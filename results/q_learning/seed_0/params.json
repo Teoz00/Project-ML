@@ -1,0 +1,13 @@
+{
+  "config": {
+    "episodes": 5000,
+    "max_steps": 200,
+    "alpha": 0.1,
+    "gamma": 0.99,
+    "epsilon_start": 1.0,
+    "epsilon_end": 0.05,
+    "epsilon_decay_frac": 0.8,
+    "save_dir": "results/q_learning"
+  },
+  "seed": 0
+}
