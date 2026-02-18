@@ -1,5 +1,5 @@
 # src/train_q.py
-import gymnasium as gym
+import gymnasium as gym # type: ignore
 import argparse
 import numpy as np
 import json

@@ -1,7 +1,7 @@
 # src/evaluate.py
-import gymnasium as gym
+import gymnasium as gym # type: ignore
 import argparse
-import torch
+import torch # type: ignore
 import numpy as np
 import os
 from dqn import DQNAgent, DQNNetwork

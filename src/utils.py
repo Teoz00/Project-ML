@@ -2,10 +2,10 @@
 import os
 import json
 import random
-import yaml
+import yaml # type: ignore
 import time
 import numpy as np
-import torch
+import torch # type: ignore
 from collections import deque, namedtuple
 import matplotlib.pyplot as plt
 
@@ -28,7 +28,7 @@ def set_seed(seed: int):
     np.random.seed(seed)
     torch.manual_seed(seed)
     try:
-        import gymnasium as gym
+        import gymnasium as gym # type: ignore
         # gym seeding best-effort
         try:
             gym.utils.seeding.np_random(seed)

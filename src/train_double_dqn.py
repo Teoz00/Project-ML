@@ -1,12 +1,12 @@
 # src/train_double_dqn.py
-import gymnasium as gym
+import gymnasium as gym # type: ignore
 import argparse
 import numpy as np
 import os
-import torch
+import torch # type: ignore
 from double_dqn import DoubleDQNAgent
 from utils import plot_learning_curve, set_seed, ensure_dir, save_json, load_yaml
-from torch.utils.tensorboard import SummaryWriter
+from torch.utils.tensorboard import SummaryWriter # type: ignore
 
 def main():
     parser = argparse.ArgumentParser()

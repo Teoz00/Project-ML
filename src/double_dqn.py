@@ -1,7 +1,7 @@
 # src/double_dqn.py
-import torch
-import torch.nn as nn
-import torch.optim as optim
+import torch # type: ignore
+import torch.nn as nn # type: ignore
+import torch.optim as optim # type: ignore
 import numpy as np
 from utils import ReplayBuffer, ensure_dir
 import os

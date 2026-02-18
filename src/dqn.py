@@ -1,7 +1,7 @@
 # src/dqn.py
-import torch
-import torch.nn as nn
-import torch.optim as optim
+import torch # type: ignore
+import torch.nn as nn # type: ignore
+import torch.optim as optim # type: ignore
 import numpy as np
 from utils import ReplayBuffer, ensure_dir
 import os
@@ -11,11 +11,11 @@ class DQNNetwork(nn.Module):
         super().__init__()
         self.embed = nn.Embedding(n_states, embedding_dim)
         self.net = nn.Sequential(
-            nn.Linear(embedding_dim, hidden_dim),
+            nn.Linear(embedding_dim, hidden_dim), #lineare
             nn.ReLU(),
-            nn.Linear(hidden_dim, hidden_dim),
+            nn.Linear(hidden_dim, hidden_dim), #nasconto
             nn.ReLU(),
-            nn.Linear(hidden_dim, n_actions)
+            nn.Linear(hidden_dim, n_actions) #Q value per ogni azione
         )
 
     def forward(self, s):
